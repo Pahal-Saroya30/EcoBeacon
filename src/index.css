@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+/* Scrollbar customizations */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+/* Beautiful neon glows and glass effects */
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+}
+.glow-teal {
+  box-shadow: 0 0 25px -5px rgba(20, 184, 166, 0.25);
+}
+.glow-amber {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+}
+
+/* Beautiful glassmorphism classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+}
+.dark .glass-panel {
+  background: rgba(15, 15, 20, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+/* Custom CSS styling for beautiful Leaflet containers */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  border-radius: 1rem;
+}
+
+.custom-leaflet-pin, .custom-pin-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Beautiful gold-border pulse animation for unlocked milestones */
+@keyframes gold-border-pulse {
+  0% {
+    border-color: #f59e0b; /* amber-500 */
+    box-shadow: 0 0 0 0px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    border-color: #fbbf24; /* amber-400 */
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+  }
+  100% {
+    border-color: #f59e0b; /* amber-500 */
+    box-shadow: 0 0 0 0px rgba(245, 158, 11, 0.4);
+  }
+}
+
+.unlocked-badge-pulse {
+  animation: gold-border-pulse 2s infinite ease-in-out;
+}
+
+/* Custom Leaflet Tooltips matching the modern design language */
+.leaflet-tooltip.custom-leaflet-tooltip {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.dark .leaflet-tooltip.custom-leaflet-tooltip {
+  background-color: rgba(24, 24, 27, 0.98) !important;
+  border: 1px solid #27272a !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Tooltip tip / arrow styling */
+.leaflet-tooltip-top.custom-leaflet-tooltip::before {
+  border-top-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+.dark .leaflet-tooltip-top.custom-leaflet-tooltip::before {
+  border-top-color: rgba(24, 24, 27, 0.98) !important;
+}
+
+
+/* ==========================================
+   Interactive Themes Color Property Redefinitions
+   ========================================== */
+
+/* 1. Cyberpunk Oasis Theme */
+.theme-cyberpunk {
+  /* Green -> Purple/Fuchsia mappings */
+  --color-green-50: #fae8ff;
+  --color-green-100: #f5d0fe;
+  --color-green-150: #f3e8ff;
+  --color-green-200: #f0abfc;
+  --color-green-300: #e879f9;
+  --color-green-400: #d946ef;
+  --color-green-500: #a21caf;
+  --color-green-600: #c084fc;
+  --color-green-700: #701a75;
+  --color-green-800: #4a044e;
+  --color-green-900: #3b0764;
+  --color-green-950: #1e1b4b;
+
+  /* Emerald -> Cyan/Teal mappings */
+  --color-emerald-50: #ecfeff;
+  --color-emerald-100: #cffafe;
+  --color-emerald-150: #e0f7fa;
+  --color-emerald-200: #a5f3fc;
+  --color-emerald-250: #22d3ee;
+  --color-emerald-300: #67e8f9;
+  --color-emerald-400: #22d3ee;
+  --color-emerald-500: #06b6d4;
+  --color-emerald-600: #0891b2;
+  --color-emerald-700: #0e7490;
+  --color-emerald-800: #155e75;
+  --color-emerald-900: #164e63;
+  --color-emerald-950: #083344;
+
+  /* Teal -> Pink/Fuchsia mapping for accents */
+  --color-teal-50: #fdf2f8;
+  --color-teal-100: #fce7f3;
+  --color-teal-200: #fbcfe8;
+  --color-teal-300: #f9a8d4;
+  --color-teal-400: #f472b6;
+  --color-teal-500: #ec4899;
+  --color-teal-600: #db2777;
+}
+
+/* 2. Sunset Warmth Theme */
+.theme-sunset {
+  /* Green -> Rose mappings */
+  --color-green-50: #fff1f2;
+  --color-green-100: #ffe4e6;
+  --color-green-150: #ffe4e6;
+  --color-green-200: #fecdd3;
+  --color-green-300: #fda4af;
+  --color-green-400: #fb7185;
+  --color-green-500: #f43f5e;
+  --color-green-600: #e11d48;
+  --color-green-700: #be123c;
+  --color-green-800: #9f1239;
+  --color-green-900: #881337;
+  --color-green-950: #4c0519;
+
+  /* Emerald -> Orange mappings */
+  --color-emerald-50: #fff7ed;
+  --color-emerald-100: #ffedd5;
+  --color-emerald-150: #ffedd5;
+  --color-emerald-200: #fed7aa;
+  --color-emerald-250: #fbbf24;
+  --color-emerald-300: #fdbb2d;
+  --color-emerald-400: #f97316;
+  --color-emerald-500: #ea580c;
+  --color-emerald-600: #c2410c;
+  --color-emerald-700: #9a3412;
+  --color-emerald-800: #7c2d12;
+  --color-emerald-900: #431407;
+  --color-emerald-950: #270e05;
+
+  /* Teal -> Yellow/Amber mappings */
+  --color-teal-50: #fffbeb;
+  --color-teal-100: #fef3c7;
+  --color-teal-200: #fde68a;
+  --color-teal-300: #fcd34d;
+  --color-teal-400: #fbbf24;
+  --color-teal-500: #f59e0b;
+  --color-teal-600: #d97706;
+}
+
+/* 3. Ocean Breeze Theme */
+.theme-ocean {
+  /* Green -> Sky Blue mappings */
+  --color-green-50: #f0f9ff;
+  --color-green-100: #e0f2fe;
+  --color-green-150: #e0f2fe;
+  --color-green-200: #bae6fd;
+  --color-green-300: #7dd3fc;
+  --color-green-400: #38bdf8;
+  --color-green-500: #0ea5e9;
+  --color-green-600: #0284c7;
+  --color-green-700: #0369a1;
+  --color-green-800: #075985;
+  --color-green-900: #0c4a6e;
+  --color-green-950: #082f49;
+
+  /* Emerald -> Royal Blue/Indigo mappings */
+  --color-emerald-50: #eff6ff;
+  --color-emerald-100: #dbeafe;
+  --color-emerald-150: #dbeafe;
+  --color-emerald-200: #bfdbfe;
+  --color-emerald-250: #60a5fa;
+  --color-emerald-300: #93c5fd;
+  --color-emerald-400: #60a5fa;
+  --color-emerald-500: #3b82f6;
+  --color-emerald-600: #2563eb;
+  --color-emerald-700: #1d4ed8;
+  --color-emerald-800: #1e40af;
+  --color-emerald-900: #1e3a8a;
+  --color-emerald-950: #172554;
+
+  /* Teal -> Cyan mappings */
+  --color-teal-50: #ecfeff;
+  --color-teal-100: #cffafe;
+  --color-teal-200: #a5f3fc;
+  --color-teal-300: #67e8f9;
+  --color-teal-400: #22d3ee;
+  --color-teal-500: #06b6d4;
+  --color-teal-600: #0891b2;
+}
+
+/* Override Glows for each Theme specifically */
+.theme-cyberpunk .glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(217, 70, 239, 0.3);
+}
+.theme-cyberpunk .glow-teal {
+  box-shadow: 0 0 25px -5px rgba(236, 72, 153, 0.3);
+}
+.theme-cyberpunk .glow-amber {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+
+.theme-sunset .glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.3);
+}
+.theme-sunset .glow-teal {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+}
+.theme-sunset .glow-amber {
+  box-shadow: 0 0 25px -5px rgba(244, 63, 94, 0.3);
+}
+
+.theme-ocean .glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.3);
+}
+.theme-ocean .glow-teal {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+.theme-ocean .glow-amber {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.3);
+}
+

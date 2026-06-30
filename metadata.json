@@ -1,0 +1,6 @@
+{
+  "name": "EcoBeacon",
+  "description": "A hyperlocal neighborhood cleanliness and waste reporting platform where users log recycling sorted materials, pin community issues on maps, verify reports using Gemini Vision AI, and earn redeemable eco points.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
